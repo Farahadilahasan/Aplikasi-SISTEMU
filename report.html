@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="report.css">
+    <title>Website Pencarian Barang Hilang</title>
+</head>
+<body>
+    <header>
+        <h1>Pencarian Barang Hilang</h1>
+    </header>
+
+    <section id="pelaporan">
+        <h2>Pelaporan Kehilangan</h2>
+        <form action="process_laporan.php" method="post" enctype="multipart/form-data">
+            <label for="item_name">Nama Barang:</label>
+            <input type="text" id="item_name" name="item_name" required>
+    
+            <label for="item_category">Kategori:</label>
+            <input type="text" id="item_category" name="item_category" required>
+    
+            <label for="description">Deskripsi:</label>
+            <textarea id="description" name="description" required></textarea>
+    
+            <label for="photo">Foto Barang:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="lokasi">Lokasi:</label>
+            <textarea id="lokasi" name="lokasi" required></textarea>
+    
+            <input type="submit" value="Laporkan">
+        </form>
+    </section>
+    
+    <section id="pencarian">
+        <h2>Pencarian Barang</h2>
+        <form action="process_pencarian.php" method="post">
+            <label for="item_name">Nama Barang:</label>
+            <input type="text" id="item_name" name="item_name" required>
+
+            <label for="search_category">Kategori:</label>
+            <input type="text" id="search_category" name="search_category">
+
+            <label for="photo">Foto Barang:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+    
+            <label for="search_location">Lokasi:</label>
+            <input type="text" id="search_location" name="search_location">
+    
+            <label for="search_time">Waktu Kehilangan:</label>
+            <input type="text" id="search_time" name="search_time">
+    
+            <input type="submit" value="Cari">
+        </form>
+    
+        <!-- Display search results here -->
+    </section>
+    
+    
+    <section id="notifikasi">
+        <h2>Area Notifikasi</h2>
+        <!-- Display notifications here using JavaScript -->
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2023 SISTEMU UNESA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
